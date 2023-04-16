@@ -1,5 +1,9 @@
 :80 {
+	handle_path /api/* {
+		rewrite * /{path}
+		reverse_proxy backend:8080
+	}
+
 	root * /srv/frontend
-	reverse_proxy /api/* backend:8080
 	file_server
 }
