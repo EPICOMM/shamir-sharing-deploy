@@ -1,0 +1,6 @@
+[submodule "shamir-sharing-front"]
+	path = shamir-sharing-front
+	url = https://github.com/EPICOMM/shamir-sharing-front.git
+[submodule "Shamir-sharing-API"]
+	path = Shamir-sharing-API
+	url = https://github.com/EPICOMM/Shamir-sharing-API

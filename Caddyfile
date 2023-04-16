@@ -1,0 +1,5 @@
+:80 {
+	root * /srv/frontend
+	reverse_proxy /api/* backend:8080
+	file_server
+}

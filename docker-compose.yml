@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  caddy:
+    image: caddy
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./shamir-sharing-front:/srv/frontend:ro
+      - caddy_data:/data
+    restart: unless-stopped
+  backend:
+    build: ./Shamir-sharing-API
+    restart: unless-stopped
+volumes:
+  caddy_data:
